@@ -1,11 +1,14 @@
-package spring_practice1.spring_practice1.members;
+package spring_practice1.spring_practice1.member;
 
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import spring_practice1.spring_practice1.AppConfig;
+import spring_practice1.spring_practice1.members.Grade;
+import spring_practice1.spring_practice1.members.Member;
+import spring_practice1.spring_practice1.members.MemberService;
+import spring_practice1.spring_practice1.members.MemberServiceImpl;
 
 public class MemberServiceTest {
-
     AppConfig appConfig = new AppConfig();
     MemberService memberService = appConfig.memberService();
 
