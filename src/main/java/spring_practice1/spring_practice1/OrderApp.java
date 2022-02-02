@@ -1,5 +1,7 @@
 package spring_practice1.spring_practice1;
 
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import spring_practice1.spring_practice1.members.Grade;
 import spring_practice1.spring_practice1.members.Member;
 import spring_practice1.spring_practice1.members.MemberService;
@@ -10,9 +12,11 @@ import spring_practice1.spring_practice1.order.OrderServiceImpl;
 
 public class OrderApp {
     public static void main(String[] args) {
-        AppConfig appConfig = new AppConfig();
-        MemberService memberService = appConfig.memberService();
-        OrderService orderService = appConfig.orderService();
+
+        ApplicationContext applicationContext = new AnnotationConfigApplicationContext(AppConfig.class);
+
+        MemberService memberService = applicationContext.getBean("memberService", MemberService.class);
+        OrderService orderService = applicationContext.getBean("orderService", OrderService.class);
 
         Long memberId = 1L;
         Member member = new Member(memberId, "memberA", Grade.VIP);
