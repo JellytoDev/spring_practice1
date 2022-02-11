@@ -5,7 +5,6 @@ import org.springframework.beans.factory.ObjectProvider;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-import spring_practice1.spring_practice1.common.MyLogger;
 
 import javax.servlet.http.HttpServletRequest;
 
